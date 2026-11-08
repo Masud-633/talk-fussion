@@ -1,0 +1,77 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --wa-green: #00a884;
+    --wa-green-dark: #008069;
+    --wa-green-light: #25d366;
+    --wa-chat-bg: #efeae2;
+    --wa-bubble-sent: #d9fdd3;
+    --wa-bubble-sent-dark: #005c4b;
+    --wa-bubble-received: #ffffff;
+    --wa-bubble-received-dark: #202c33;
+    --wa-panel-dark: #111b21;
+    --wa-panel-header-dark: #202c33;
+    --wa-border-dark: #2a3942;
+  }
+
+  body {
+    background-color: #d1d7db;
+    color: #111b21;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    user-select: text;
+    overflow: hidden;
+  }
+
+  body.dark {
+    background-color: #0c1317;
+    color: #e9edef;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* WhatsApp Doodle Background Pattern */
+.bg-whatsapp-doodle {
+  background-color: #efeae2;
+  background-image: radial-gradient(#d3cbbe 1px, transparent 1px), radial-gradient(#d3cbbe 1px, #efeae2 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.dark .bg-whatsapp-doodle {
+  background-color: #0b141a;
+  background-image: radial-gradient(#18242c 1px, transparent 1px), radial-gradient(#18242c 1px, #0b141a 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.bg-whatsapp-nature {
+  background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+  background-size: 400px;
+  background-repeat: repeat;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.08); opacity: 0.85; }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 1.8s infinite ease-in-out;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ChatBuzzer",
+  "description": "WhatsApp-style messaging and status updates app with voice calls, rich media, live location, and real-time chat.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
